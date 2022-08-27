@@ -14,9 +14,8 @@
 //
 // @param n	The maximum limit of the sum.
 // @return	The result of the addition from 1 to n.
-// @Complexity	"O(n)" el crecimiento es lineal en tanto el tiempo 
-// de ejecución es cada vez mayor de modo proporcional a cómo se 
-// incrementa el tamaño de la entrada.
+// @Complexity	"O(n)" el crecimiento es lineal porque el tiempo de 
+// ejecución es cada vez mayor proporcionalmente al tiempo de entrada.
 // =================================================================
 unsigned int sumaIterativa(unsigned int n) {
     int suma = 0;
@@ -34,9 +33,8 @@ unsigned int sumaIterativa(unsigned int n) {
 //
 // @param n	The maximum limit of the sum.
 // @return	The result of the addition from 1 to n.
-// @Complexity	"O(n)" el crecimiento es lineal en tanto el tiempo 
-// de ejecución es cada vez mayor de modo proporcional a cómo se 
-// incrementa el tamaño de la entrada. 
+// @Complexity	"O(n)" el crecimiento es lineal porque el tiempo de 
+// ejecución es cada vez mayor proporcionalmente al tiempo de entrada.
 // =================================================================
 unsigned int sumaRecursiva(unsigned int n) {
     int suma = 0;
