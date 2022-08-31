@@ -1,8 +1,8 @@
 ![Tec de Monterrey](images/logotecmty.png)
-# Act 1.1 - Funciones Iterativas, Recursivas y su análisis de Complejidad
+# Act 1.1 - Iterative, Recursive Functions and their Complexity Analysis
 
-## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
-En este repositorio de trabajo encontrarás el archivo "activity.h". En este archivo deberás desarrollar la implementación del problema presentado en esta actividad.  En la parte superior del archivo coloca, en comentarios, tus datos. Por ejemplo:
+## <span style="color: rgb(26, 99, 169);">What I have to do?</span>
+In this working repository you will find the file "activity.h". In this file you must develop the implementation of the problem presented in this activity. At the top of the file, place your data in comments. For example:
 ```
 // =========================================================
 // File: activity.h
@@ -10,7 +10,7 @@ En este repositorio de trabajo encontrarás el archivo "activity.h". En este arc
 // Date: 01/01/2021
 // =========================================================
 ```
-Implementa, <span style="text-decoration-line: underline;">forma individual</span>, las diferentes versiones de una sumatora de **1 hasta n** y llame a tres funciones:
+Implement, <span style="text-decoration-line: underline;">individually</span>, the different versions of a sum of **1 to n** and call three functions:
 
 <table style="height: 10px; width: 0%; border-collapse: collapse; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;" border="1">
 <tbody>
