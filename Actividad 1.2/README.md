@@ -1,8 +1,8 @@
 ![Tec de Monterrey](images/logotecmty.png)
-# Act 1.2 - Algoritmos de Búsqueda y Ordenamiento
+# Act 1.2 - Search and Sort Algorithms
 
-## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
-En este repositorio de trabajo encontrarás los archivos "search.h", "bubble.h", "selection.h", "insertion.h" y "main.cpp", los cuales deberás modificar para el desarrollo de esta actividad. En el archivo "main.cpp", deberás colocar en la parte superior, en comentarios, tus datos. Por ejemplo:
+## <span style="color: rgb(26, 99, 169);">What I have to do?</span>
+In this working repository you will find the files "search.h", "bubble.h", "selection.h", "insertion.h" and "main.cpp", which you will have to modify for the development of this activity. In the "main.cpp" file, you must place your data at the top, in comments. For example:
 ```
 // =========================================================
 // File: main.cpp
@@ -11,17 +11,17 @@ En este repositorio de trabajo encontrarás los archivos "search.h", "bubble.h",
 // =========================================================
 ```
 
-Implementa, <span style="text-decoration: underline;">forma individual</span>, una aplicación que lea *n* datos, los ordene e indique la cantidad de comparaciones que realizar de cada uno de los tres algoritmos básicos de ordenamiento (burbuja, selection, inserción), posteriormente deberá leer *q* valores, mostrando la posición donde se encuentra el valor en el arreglo ordenado (-1 en caso de que no se encuentre) y la cantidad de comparaciones que hizo tanto por la búsqueda secuencial como por la búsqueda binaria.
+Implement, <span style="text-decoration: underline;">individually</span>, an application that reads *n* data, sorts it and indicates the number of comparisons to be made for each of the three basic sorting algorithms (bubble, selection, insertion), then it must read *q* values, showing the position where finds the value in the sorted array (-1 if not found) and the number of comparisons it made by both sequential and binary search.
 
-## <span style="color: rgb(26, 99, 169);">**Entrada**</span>
-La primera línea contiene un número entero positivo *n* (300 <= *n* <= 500) que indica el número de elementos a leer. A continuación, *n* números enteros enteros. Después vendrá una línea con un valor, *q*, indicando el cantidad de números a buscar y en la siguiente línea los *q* a buscar.
+## <span style="color: rgb(26, 99, 169);">**Input**</span>
+The first line contains a positive integer *n* (300 <= *n* <= 500) indicating the number of elements to read. Next, *n* whole integers. Then there will be a line with a value, *q*, indicating the number of numbers to search and on the next line the *q* to search.
 
-## <span style="color: rgb(26, 99, 169);">**Salida**</span>
-La primera línea se desplegará el número de comparaciones que cada algoritmo básico de ordenamiento realizó (burbuja, selección, inserción), separados por espacios.
+## <span style="color: rgb(26, 99, 169);">**Output**</span>
+The first line will display the number of comparisons that each basic sorting algorithm performed (bubble, select, insert), separated by spaces.
 
-Después, se imprimirán *q* línea (uno por cada valor a buscar) mostrando la posición, cantidad de comparaciones de la búsqueda secuencial y la cantidad de comparaciones de la búsqueda binaria, separadas por espacios.
+Afterwards, *q* lines will be printed (one for each value to be searched) showing the position, number of comparisons of the sequential search and number of comparisons of the binary search, separated by spaces.
 
-## <span style="color: rgb(26, 99, 169);">**Ejemplo de entrada**</span>
+## <span style="color: rgb(26, 99, 169);">**Example of input**</span>
 ```
 8
 10 4 8 12 20 15 54 18
@@ -29,7 +29,7 @@ Después, se imprimirán *q* línea (uno por cada valor a buscar) mostrando la p
 20 54 100 12
 ```
 
-## <span style="color: rgb(26, 99, 169);">**Ejemplo de salida**</span>
+## <span style="color: rgb(26, 99, 169);">**Example of output**</span>
 ```
 5 5 5
 
@@ -39,16 +39,16 @@ Después, se imprimirán *q* línea (uno por cada valor a buscar) mostrando la p
 3 4 1
 ```
 
-Para probar tu implementación, compila tu programa con el comando:
+To test your implementation, compile your program with the command:
 ```
 g++ -std=c++11 main.cpp -o app
 ```
-Posteriormente, prueba con cada uno de los archivos de entrada de prueba que encontrarás en este repositorio (input1.txt, input2.txt, input3.txt, input4.txt). Los resultados que debes obtener se encuentran en los archivos llamados solution1.txt, solution2.txt, solution3.txt y solution4.txt. Para realizar las pruebas, puedes usar las siguientes líneas de código. Por ejemplo, si queremos probar con el archivo de prueba "input1.txt".
+Then try each of the test input files you'll find in this repository (input1.txt, input2.txt, input3.txt, input4.txt). The results you should get are in files named solution1.txt, solution2.txt, solution3.txt, and solution4.txt. To perform the tests, you can use the following lines of code. For example, if we want to test with the test file "input1.txt".
 ```
 ./app < input1.txt > mysolution1.txt
 diff mysolution1.txt solution1.txt
 ```
-Si el segundo comando no tiene ninguna salida, los resultados que obtuviste son los esperados.
+If the second command has no output, the results you got are as expected.
 
 ## <span style="color: rgb(26, 99, 169);">**¿Bajo qué criterios se evalúa mi evidencia?**</span>
 
