@@ -16,26 +16,25 @@ Implement, <span style="text-decoration-line: underline;">individually</span>, t
 <tbody>
 <tr style="height: 24px;">
 <td style="width: 30%; height: 10px; background-color: rgb(25, 99, 169);" rowspan="5"><span style="font-size: 18pt; color: rgb(255, 255, 255);">sumaIterativa</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Descripción</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Description</td>
 <td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">
-Calcule la sumatoria de 1 hasta n con un metodo iterativo.
-</td>
+Calculate the sum of 1 to n with an iterative method.</td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Entrada</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">Un entero positivo (n)</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Input</td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">A positive integer (n)</td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Salida</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">La sumatoria de 1 hasta n</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Output</td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">The sum of 1 to n</td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondición</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">n es un entero positivo</span></td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondition</span></td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">n is a positive integer</span></td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondición</span></td>
-<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Nada</span></td>
+<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondition</span></td>
+<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Nothing</span></td>
 </tr>
 </tbody>
 </table>
@@ -46,26 +45,26 @@ Calcule la sumatoria de 1 hasta n con un metodo iterativo.
 <tbody>
 <tr style="height: 24px;">
 <td style="width: 30%; height: 10px; background-color: rgb(25, 99, 169);" rowspan="5"><span style="font-size: 18pt; color: rgb(255, 255, 255);">sumaRecursiva</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Descripción</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Description</td>
 <td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">
-Calcule la sumatoria de 1 hasta n con un metodo recursivo.
+Calculate the sum of 1 to n with a recursive method.
 </td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Entrada</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">Un entero positivo (n)</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Input</td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">A positive integer (n)</td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Salida</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">La sumatoria de 1 hasta n</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Output</td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">The sum of 1 to n</td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondición</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">n es un entero positivo</span></td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondition</span></td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">n is a positive integer</span></td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondición</span></td>
-<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Nada</span></td>
+<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondition</span></td>
+<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Nothing</span></td>
 </tr>
 </tbody>
 </table>
@@ -76,37 +75,37 @@ Calcule la sumatoria de 1 hasta n con un metodo recursivo.
 <tbody>
 <tr style="height: 24px;">
 <td style="width: 30%; height: 10px; background-color: rgb(25, 99, 169);" rowspan="5"><span style="font-size: 18pt; color: rgb(255, 255, 255);">sumaDirecta</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Descripción</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Description</td>
 <td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">
-Calcule la sumatoria de 1 hasta n con un metodo matemático directo.
+Calculate the sum of 1 to n with a direct mathematical method.
 </td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Entrada</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">Un entero positivo (n)</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Input</td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">A positive integer (n)</td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Salida</td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">La sumatoria de 1 hasta n</td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);">Output</td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);">The sum of 1 to n</td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondición</span></td>
-<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">n es un entero positivo</span></td>
+<td style="width: 0px; height: 0px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Precondition</span></td>
+<td style="width: 0px; height: 0px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">n is a positive integer</span></td>
 </tr>
 <tr style="height: 24px;">
-<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondición</span></td>
-<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Nada</span></td>
+<td style="width: 0px; height: 10px; background-color: rgb(0, 139, 247);"><span style="color: rgb(0, 0, 0);">Postcondition</span></td>
+<td style="width: 0px; height: 10px; background-color: rgb(183, 219, 255);"><span style="color: rgb(0, 0, 0);">Nothing</span></td>
 </tr>
 </tbody>
 </table>
 
-<br>Todas las funcionalidades deberán de estar correctamente alineadas y documentadas.&nbsp; Recuerda que todas las funcionalidades deberán pasar exitosamente todas las pruebas. Como parte de la documentación deberá incluirse la complejidad de cada una de ellas.
+<br>All functionalities must be correctly aligned and documented.&nbsp; Remember that all features must successfully pass all tests. As part of the documentation, the complexity of each of them must be included.
 
-Para probar tu implementación, ejecuta el comando:
+To test your implementation, run the command:
 ```
 make
 ```
-Este comando compilará tu código y generará una serie de archivos de pruebas llamados "runTest#", donde # será un número de prueba. Para ejecutar prueba, solo deberás ejecutar el archivos correcto. Por ejemplo, si quiere revisar si mi código cumple con la prueba número 3, deberías ejecutar:
+This command will compile your code and generate a series of test files called "runTest#", where # is a test number. To run test, you just need to run the correct files. For example, if you want to check if my code meets test number 3, you would run:
 ```
 ./runTest3
 ```
