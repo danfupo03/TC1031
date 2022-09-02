@@ -46,7 +46,7 @@ std::pair<int, int> sequentialSearch(const std::vector<T> &v, T key) {
 template <class T>
 std::pair<int, int> binarySearch(const std::vector<T> &v, T key) {
 	int low, high, mid;
-	int count = 0;
+	int count = 0; //Variable para contar el número de interacciones
 	low = 0;
 	high = v.size() - 1;
 	while (low <= high) {

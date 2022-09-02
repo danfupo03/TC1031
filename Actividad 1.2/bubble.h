@@ -23,7 +23,7 @@
 // =================================================================
 template <class T>
 int bubbleSort(T *arr, int size) {
-	int count = 0;
+	int count = 0; //Variable para contar el número de interacciones
 	for(int i = size - 1; i > 0; i--){
 		for(int j = 0; j < i; j++){
 			if(arr[j] > arr[j + 1]){
@@ -42,7 +42,7 @@ int bubbleSort(T *arr, int size) {
 // =================================================================
 template <class T>
 int bubbleSort(std::vector<T> &v) {
-	int count = 0;
+	int count = 0; //Variable para contar el número de interacciones
 	for(int i = v.size() - 1; i > 0; i--){
 		for(int j = 0; j < i; j++){
 			if(v[j] > v[j + 1]){

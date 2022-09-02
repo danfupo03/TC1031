@@ -37,12 +37,12 @@ int main(int argc, char* argv[]) {
 	//inputFile.open("input1.txt");
 	//outputFile.open("output1.txt");
 	int n1, n2, num;
-    inputFile >> n1;
+    inputFile >> n1; //Leemos la primer línea del input 
 
 	// Vector donde se van a almacenar nuestros numeros
     vector<int> vecNums(n1);
 	
-	// Aquí se leen nuestros números
+	// Aquí se leen nuestros números (segunda línea del input)
     for (int i = 0; i < n1; i++) {
 		inputFile >> num;
         vecNums[i] = num;
@@ -51,25 +51,32 @@ int main(int argc, char* argv[]) {
 	// Los diferentes algoritmos de ordenamiento que vamos a utilizar
 	int bubbleComp, selectionComp, insertionComp;
 
+	//Creamos un nuevo vector con el que vamos a ordenar
 	vector<int> tidy = vecNums;
+
+	//Ordenamos con método burbuja
 	bubbleComp = bubbleSort(tidy);
+	//Volvemos al vector desordenado
 	tidy = vecNums;
+	//Ordenamos con método de selección
 	selectionComp = selectionSort(tidy);
+	//Volvemos al vector desordenado
 	tidy = vecNums;
+	//Ordenamos con método de inserción
 	insertionComp = insertionSort(tidy);
 
-	outputFile << bubbleComp << ' ' 
-			   << selectionComp << ' ' 
-			   << insertionComp << '\n' << '\n';
+	//Imprimimos en el output
+	outputFile << bubbleComp << ' ' << selectionComp << ' ' << insertionComp << '\n' << '\n';
 
-
+	//Leemos la tercera línea del input, que indica la cantidad de numeros a buscar
 	inputFile >> n2;
 	std::pair<int, int> result;
+	
+	//Comenzamos con la búsqueda de nuestros números 
  	for (int i = 0; i < n2; i++) {
 		inputFile >> num;
 		result = sequentialSearch(tidy, num);
-		outputFile << result.first << ' '
-				   << result.second << ' ';
+		outputFile << result.first << ' ' << result.second << ' ';
 		result = binarySearch(tidy, num);
 		outputFile << result.second << '\n';
     } 

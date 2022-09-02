@@ -23,7 +23,7 @@
 // =================================================================
 template <class T>
 int insertionSort(T *arr, int size) {
-	int count = 0;
+	int count = 0; //Variable para contar el número de interacciones
 	for(int i = 1; i < size; i++){
 		for(int j = i; j > 0 && arr[j] < arr[j - 1]; j--){
 			count++;
@@ -40,7 +40,7 @@ int insertionSort(T *arr, int size) {
 // =================================================================
 template <class T>
 int insertionSort(std::vector<T> &v) {
-	int count = 0;
+	int count = 0; //Variable para contar el número de interacciones
 	for(int i = 1; i < v.size(); i++){
 		for(int j = i; j > 0 && v[j] < v[j - 1]; j--){
 			count++;

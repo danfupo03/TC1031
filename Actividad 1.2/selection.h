@@ -24,7 +24,7 @@
 template <class T>
 int selectionSort(T *arr, int size) {
 	int pos;
-	int count = 0;
+	int count = 0; //Variable para contar el número de interacciones
 	for(int i = size - 1; i > 0; i--){
 		pos = 0;
 		for(int j = 1; j <= i; j++){
@@ -48,7 +48,7 @@ int selectionSort(T *arr, int size) {
 template <class T>
 int selectionSort(std::vector<T> &v) {
 	int pos;
-	int count = 0;
+	int count = 0; //Variable para contar el número de interacciones
 	for(int i = v.size() - 1; i > 0; i--){
 		pos = 0;
 		for(int j = 1; j <= i; j++){
