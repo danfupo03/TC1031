@@ -36,16 +36,16 @@ int main(int argc, char* argv[]) {
 
 	//inputFile.open("input1.txt");
 	//outputFile.open("output1.txt");
-	int n1, n2, num;
-    inputFile >> n1; //Leemos la primer línea del input 
+	int n1, n2, num; //Asignamos variables para leer nuestros archivos
+    inputFile >> n1; //Leemos la primer línea del input y asignamos el valor a la variable n1
 
-	// Vector donde se van a almacenar nuestros numeros
+	// Establecemos vector donde se van a almacenar nuestros numeros
     vector<int> vecNums(n1);
 	
 	// Aquí se leen nuestros números (segunda línea del input)
     for (int i = 0; i < n1; i++) {
-		inputFile >> num;
-        vecNums[i] = num;
+		inputFile >> num; //Se lee cada numero de la linea y se asigna a la variable num
+        vecNums[i] = num; //Se asigna el valor de num al vector
     }
 
 	// Los diferentes algoritmos de ordenamiento que vamos a utilizar

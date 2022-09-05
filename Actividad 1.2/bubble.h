@@ -27,12 +27,12 @@ int bubbleSort(T *arr, int size) {
 	for(int i = size - 1; i > 0; i--){
 		for(int j = 0; j < i; j++){
 			if(arr[j] > arr[j + 1]){
-				count++;
+				count++; //Añade una interaccion a la variable
 				swap(arr, j, j + 1);
 			}
 		}
 	}
-	return count;
+	return count; //Regresa la variable
 }
 
 // =================================================================
@@ -46,12 +46,12 @@ int bubbleSort(std::vector<T> &v) {
 	for(int i = v.size() - 1; i > 0; i--){
 		for(int j = 0; j < i; j++){
 			if(v[j] > v[j + 1]){
-				count++;
+				count++; //Variable para contar el número de interacciones 
 				swap(v, j, j + 1);
 			}
 		}
 	}
-	return count;
+	return count; //Regresa la variable
 }
 
 #endif /* BUBBLE_H */
