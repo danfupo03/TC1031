@@ -50,7 +50,7 @@ std::pair<int, int> binarySearch(const std::vector<T> &v, T key) {
 	low = 0;
 	high = v.size() - 1;
 	while (low <= high) {
-		count++;
+		count++; //Se suma una interaccion
 		mid = low + ((high - low) / 2); // mid = (high + low) / 2;
 		if (key == v[mid]) {
 			return std::pair<int, int>(mid, count);
@@ -60,7 +60,7 @@ std::pair<int, int> binarySearch(const std::vector<T> &v, T key) {
 			low = mid + 1;
 		}
 	}
-	return std::pair<int, int>(-1, count);
+	return std::pair<int, int>(-1, count); //Regresa la variable 
 }
 
 // =================================================================

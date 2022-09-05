@@ -33,11 +33,11 @@ int selectionSort(T *arr, int size) {
 			}
 		}
 		if (pos != i){
-			count++;
+			count++; //Se suma una interaccion
 			swap(arr, i, pos);
 		}
 	}
-	return count;
+	return count; //Regresa la variable
 }
 
 // =================================================================
@@ -57,11 +57,11 @@ int selectionSort(std::vector<T> &v) {
 			}
 		}
 		if (pos != i){
-			count++;
+			count++; //Suma una interaccion
 			swap(v, i, pos);
 		}
 	}
-	return count;
+	return count; //Regresa la variable
 }
 
 #endif /* SELECTION_H */
