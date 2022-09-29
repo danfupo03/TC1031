@@ -295,27 +295,27 @@ void List<T>::insert_at(T val, uint index) {
 		throw IndexOutOfBounds();
 	}
 
-	Node<T> *temp_node = new Node<T>(val),
-			*new_node = head;
+	Node<T> *tempNode = new Node<T>(val),
+			*newNode = head;
 	
-	temp_node->next = NULL;
+	tempNode->next = NULL;
 
 	//Insertar en la posicion 0
 	if(index == 0){
-		temp_node->next = head;
-		head = temp_node;
+		tempNode->next = head;
+		head = tempNode;
 		size++;
 		return;
 	}
 
 	//Ciclo para insertar en cualquier posicion
 	for(int i=0;i<index-1;i++){
-		new_node = new_node->next;
+		newNode = newNode->next;
 	}
 
 	//Actulizar los enlaces
-	temp_node->next = new_node->next;
-	new_node->next = temp_node;
+	tempNode->next = newNode->next;
+	newNode->next = tempNode;
 
 	size++;
 }
@@ -396,22 +396,22 @@ T List<T>::remove_at(uint index) {
 	}
 
 	T aux;
-	Node<T> *temp_node = head;
+	Node<T> *tempNode = head;
 
 	if(index == 0){
 		return pop_front();
 	}
 
-	for(int i=0;i<index-1 && temp_node != NULL;i++){
-		temp_node = temp_node->next;
+	for(int i=0;i<index-1 && tempNode != NULL;i++){
+		tempNode = tempNode->next;
 	}
 	
-	Node<T> *next_node = temp_node->next;
-	temp_node->next = next_node->next;
+	Node<T> *nextNode = tempNode->next;
+	tempNode->next = nextNode->next;
 
 	size--;
 
-	return next_node->value;
+	return nextNode->value;
 	
 }
 
@@ -425,13 +425,13 @@ T List<T>::remove_at(uint index) {
 template <class T>
 long int List<T>::indexOf(T val) const {
 	
-	Node<T> *temp_node = head;
+	Node<T> *tempNode = head;
 
-	for(int i=0;i<size && temp_node != NULL;i++){
-		if(temp_node->value==val){
+	for(int i=0;i<size && tempNode != NULL;i++){
+		if(tempNode->value==val){
 			return i;
 		}
-		temp_node = temp_node->next;
+		tempNode = tempNode->next;
 	}
 
 	return -1;
