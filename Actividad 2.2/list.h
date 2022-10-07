@@ -1,8 +1,8 @@
 // =================================================================
 //
 // File: list.h
-// Author:
-// Date:
+// Author: Daniel Emilio Fuentes Portaluppi
+// Date: 04/10/22
 //
 // =================================================================
 #ifndef DOUBLELINKEDLIST_H
@@ -24,7 +24,7 @@ private:
 	Node(T);
 	Node(T, Node<T>*, Node<T>*);
 
-	T	    	value;
+	T value;
 	Node<T> *previous, *next;
 
 	friend class DoubleLinkedList<T>;
@@ -223,7 +223,19 @@ T DoubleLinkedList<T>::last() const {
 template <class T>
 T DoubleLinkedList<T>::before(T val) const {
 	
-	return val;
+	Node<T> *tempN = head;
+
+	if(val==tempN->value){
+		throw NoSuchElement();
+	}
+
+	for(int i=0; i<size && tempN != NULL; i++){
+		if(val==tempN->value){
+			return tempN->previous->value;
+		} 
+		tempN = tempN->next;
+	}
+	throw NoSuchElement();
 }
 
 // =================================================================
@@ -234,7 +246,15 @@ T DoubleLinkedList<T>::before(T val) const {
 template <class T>
 T DoubleLinkedList<T>::after(T val) const {
 	
-	return val;
+	Node<T> *tempN = head;
+
+	for(int i=0; i<size && tempN->next != NULL; i++){
+		if(val == tempN->value){
+			return tempN->next->value;
+		}
+		tempN = tempN->next;
+	}
+	throw NoSuchElement();	
 }
 
 // =================================================================
@@ -290,21 +310,64 @@ void DoubleLinkedList<T>::push_back(T val) {
 // =================================================================
 // Insert an element before the first occurrence of a certain value.
 //
+// @complexity O(n)
 // @throws NoSuchelement, if lookingFor is not on the list.
 // =================================================================
 template <class T>
 void DoubleLinkedList<T>::insert_before(T lookingFor, T newVal) {
-	// TO DO
+	
+	if(!contains(lookingFor)){
+		throw NoSuchElement();
+	}
+	else if(lookingFor == head->value){
+		return push_front(newVal);
+	}
+
+	Node<T> *tempN = head, *newN = new Node<T> (newVal);
+
+	for(int i = 0; i<size; i++){
+		tempN = tempN->next;
+		if(tempN->next->value == lookingFor){
+			break;
+		}
+	}
+
+	newN->next = tempN->next;
+	tempN->next = newN;
+	newN->previous = tempN;
+
+	size++;
 }
 
 // =================================================================
 // Insert an element after the first occurrence of a certain value.
 //
+// @complexity O(n)
 // @throws NoSuchelement, if lookingFor is not on the list.
 // =================================================================
 template <class T>
 void DoubleLinkedList<T>::insert_after(T lookingFor, T newVal) {
-	// TO DO
+	if(!contains(lookingFor)){
+		throw NoSuchElement();
+	}
+
+	Node<T> *tempN = head;
+
+	while(tempN != NULL){
+		if(tempN->value == lookingFor){
+			Node<T> *newN = new Node<T> (newVal, tempN, tempN->next);
+
+			if(tempN->next != NULL){
+				tempN->next->previous = tempN;
+			}
+			
+			tempN->next = newN;
+			size++;
+			return;
+		}
+		tempN = tempN->next;
+	}
+	throw NoSuchElement();
 }
 
 // =================================================================
