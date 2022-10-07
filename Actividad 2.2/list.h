@@ -218,6 +218,7 @@ T DoubleLinkedList<T>::last() const {
 // =================================================================
 // Returns the value before the first occurrence if certain value.
 //
+// @complexity O(n)
 // @throws NoSuchelement, if val is not on the list.
 // =================================================================
 template <class T>
@@ -241,6 +242,7 @@ T DoubleLinkedList<T>::before(T val) const {
 // =================================================================
 // Returns the value after the first occurrence of certain value.
 //
+// @complexity O(n)
 // @throws NoSuchelement, if val is not on the list.
 // =================================================================
 template <class T>
