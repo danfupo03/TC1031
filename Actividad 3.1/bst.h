@@ -1,7 +1,7 @@
 // =================================================================
 //
 // File: bst.h
-// Author: Daniel Emilio Fuentes Portaluppi - A01708302
+// Author: Daniel Emilio Fuentes Portaluppi - A0170830
 // Date: 23/10/31 
 //
 // =================================================================
