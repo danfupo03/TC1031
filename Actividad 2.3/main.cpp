@@ -2,7 +2,7 @@
 //
 // File: main.cpp
 // Authors: Daniel Emilio Fuentes Portaluppi - A01708302
-// 			
+// 			Ivan Ricardo Paredes Aviles - A01705083
 // 
 // Date: 18/10/22
 //
