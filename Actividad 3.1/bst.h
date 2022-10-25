@@ -2,7 +2,7 @@
 //
 // File: bst.h
 // Author: Daniel Emilio Fuentes Portaluppi - A0170830
-// Date: 23/10/31 
+// Date: 26/10/31 
 //
 // =================================================================
 #ifndef BST_H
