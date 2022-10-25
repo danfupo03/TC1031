@@ -267,8 +267,22 @@ void Node<T>::preOrder(std::stringstream &aux) const {
 // =================================================================
 template <class T>
 uint Node<T>::leaves() const {
-	//TO DO
-	return 0;
+	
+	uint n = 0;
+
+	if(right == NULL && left == NULL){
+		return 1;
+	}
+
+	if(right != NULL){
+		n += right->leaves();
+	}
+
+	if(left != NULL){
+		n += left->leaves();
+	}
+
+	return n;
 }
 
 // =================================================================
@@ -280,8 +294,24 @@ uint Node<T>::leaves() const {
 // =================================================================
 template <class T>
 uint Node<T>::depth() const {
-	//TO DO
-	return 0;
+	
+	uint l = 0;
+	uint r = 0;
+
+	if (left == NULL && right == NULL)
+		return 1;
+
+	if (left != NULL)
+		l = left->depth();
+
+	if (right != NULL)
+		r = right->depth();
+
+	if(l < r)
+		return r + 1;
+	else 
+		return l + 1;
+	//return std::max(l, r) + 1;
 }
 
 // =================================================================
@@ -293,8 +323,14 @@ uint Node<T>::depth() const {
 // =================================================================
 template <class T>
 bool Node<T>::isFull() const {
-	//TO DO
-	return false;
+	
+	if (right == NULL && left == NULL)
+		return true;
+
+	else if (right == NULL || left == NULL)
+		return false;
+
+	return right->isFull() && left->isFull();
 }
 
 // =================================================================
@@ -306,7 +342,24 @@ bool Node<T>::isFull() const {
 // =================================================================
 template <class T>
 T Node<T>::ancestor(T val) const {
-	//TO DO
+	
+	if (val == value)
+		throw NoSuchElement();
+
+	if (left != NULL && left->value == val)
+		return value;
+
+	else if (right != NULL && right->value == val)
+		return value;
+
+	if (val < value && left != NULL)
+		return left->ancestor(val);
+
+	else if (val > value && right != NULL)
+		return right->ancestor(val);
+
+	throw NoSuchElement();
+
 	return T();
 }
 
@@ -334,6 +387,8 @@ public:
 	std::string preOrder() const;
 
 	std::string byLevel() const;
+	void givenLevel(Node<T> *, int, std::stringstream &) const;
+	int height() const;
 	uint leaves() const;
 	bool isFull() const;
 	T ancestor(T) const;
@@ -486,14 +541,54 @@ std::string BST<T>::postOrder() const {
 // =================================================================
 template <class T>
 std::string BST<T>::byLevel() const {
+	
 	std::stringstream aux;
 
 	aux << "[";
-	if (!empty()) {
-		// TO DO
+	if (!empty())
+	{
+		int h = height();
+		for (int i = 0; i < h; i++)
+			givenLevel(root, i, aux);
 	}
 	aux << "]";
 	return aux.str();
+}
+
+// =================================================================
+// Prints the level it receives.
+//
+// =================================================================
+template <class T>
+void BST<T>::givenLevel(Node<T> *root, int level, std::stringstream &aux) const
+{
+	if (root == NULL)
+		return;
+
+	else if (level == 0)
+		aux << root->value << " ";
+
+	else
+	{
+		givenLevel(root->left, level - 1, aux);
+		givenLevel(root->right, level - 1, aux);
+	}
+}
+
+// =================================================================
+// Returns the height of the bst.
+// 
+// @return the height val.
+//
+// =================================================================
+template <class T>
+int BST<T>::height() const
+{
+	if (empty())
+		return 0;
+
+	else
+		return root->depth();
 }
 
 // =================================================================
@@ -543,4 +638,5 @@ T BST<T>::ancestor(T val) const {
 
 	return root->ancestor(val);
 }
+
 #endif /* BST_H */
