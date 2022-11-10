@@ -263,9 +263,13 @@ std::string UListGraph<Vertex>::toString() const
   return aux.str();
 }
 
-/***********************************************************/
-/**************************** DFS **************************/
-/***********************************************************/
+// =================================================================
+// Prints the value of the graph in a Depth First Search order
+//
+// @param Initial vertex & pointer of the graph
+// @return visited
+// @complexity O(n^2)
+// =================================================================
 template <class Vertex>
 std::set<Vertex> dfs(const Vertex &start,
                      const UnweightedGraph<Vertex> *graph)
@@ -295,9 +299,13 @@ std::set<Vertex> dfs(const Vertex &start,
   return visited;
 }
 
-/***********************************************************/
-/**************************** BFS **************************/
-/***********************************************************/
+// =================================================================
+// Prints the value of the graph in a Breadth First Search order
+//
+// @param Initial vertex & pointer of the graph
+// @return visited
+// @complexity O(n^2)
+// =================================================================
 template <class Vertex>
 std::set<Vertex> bfs(const Vertex &start, const UnweightedGraph<Vertex> *graph)
 {

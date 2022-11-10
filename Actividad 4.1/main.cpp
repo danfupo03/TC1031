@@ -15,7 +15,10 @@
 // Loads the arcs of the graph and store them in an Adjacency Matrix 
 // and an Adjacency List
 //
-// @complexity O(n^2)
+// @param number of nodes, number of arcs, adjacency matrix, adjacency list 
+// & input file
+// @return void
+// @complexity O(n)
 // =================================================================
 template <class Vertex>
 void loadGraph(int n, int m, UMatrixGraph<Vertex> &umg, UListGraph<Vertex> &ulg, std::ifstream &file) {
@@ -42,7 +45,7 @@ int main(int argc, char *argv[])
 
 	int n, m;
 
-	file >> n >> m;
+	file >> n >> m; // n = number of nodes, m = number of arcs
 
 	UMatrixGraph<int> umg(n);
 	UListGraph<int> ulg(n);
@@ -51,17 +54,19 @@ int main(int argc, char *argv[])
 
 	file.close();
 
+	//Print the Adjacency Matrix
 	std::cout << "---Matrix Graph---" << std::endl;
 	std::cout << umg.toString();
+	//Print the Adjacency List
 	std::cout << "---List Graph---" << std::endl;
 	std::cout << ulg.toString();
 
 	std::cout << "DFS" << std::endl;
-	dfs(2, &umg);
+	dfs(8, &umg);
 	std::cout << "\n";
 	
 	std::cout << "\nBFS" << std::endl;
-	bfs(2, &ulg);
+	bfs(8, &ulg);
 	std::cout << "\n";
 
 	return 0;
