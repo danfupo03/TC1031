@@ -1,59 +1,69 @@
-/*
- * main.cpp
- *
- *  Created on: 3/11/2018
- *      Author: pperezm
- */
+// =================================================================
+//
+// File: main.cpp
+// Authors: Daniel Emilio Fuentes Portaluppi - A01708302
+// 
+// Date: 09/11/22
+//
+// =================================================================
 #include <iostream>
 #include <fstream>
 #include <cstring>
 #include "ugraph.h"
 
-int main(int argc, char* argv[]) {
+// =================================================================
+// Loads the arcs of the graph and store them in an Adjacency Matrix 
+// and an Adjacency List
+//
+// @complexity O(n^2)
+// =================================================================
+template <class Vertex>
+void loadGraph(int n, int m, UMatrixGraph<Vertex> &umg, UListGraph<Vertex> &ulg, std::ifstream &file) {
+	int f, t;
+	for(int i = 0; i < m; i++) {
+		file >> f >> t;
+		umg.addEdge(f, t);
+		ulg.addEdge(f, t);
+	}
+}
+
+int main(int argc, char *argv[])
+{
+	if(argc != 2) {
+		return -1;
+	}
+
+	std::ifstream file(argv[1]);
+
+	if(!file.is_open()) {
+		std::cout << "Error: File not found" << std::endl;
+		return 1;
+	}
 
 	int n, m;
-	std::ifstream input;
-	input.open("input1.txt");
-	input >> n >> m;
 
-	/***********************************************************/
-	/************************ UMatrixGraph *********************/
-	/***********************************************************/
-	
-	UMatrixGraph<char> umg(n, false);
+	file >> n >> m;
 
-	umg.loadGraph(n, m, input);
+	UMatrixGraph<int> umg(n);
+	UListGraph<int> ulg(n);
+
+	loadGraph(n, m, umg, ulg, file);
+
+	file.close();
+
+	std::cout << "---Matrix Graph---" << std::endl;
 	std::cout << umg.toString();
-
-	std::set<char> edges = umg.getConnectionFrom('b');
-	std::set<char>::iterator itr;
-	
-	std::cout << "b ->\t";
-	for (itr = edges.begin(); itr != edges.end(); itr++) {
-		std::cout << (*itr) << "\t";
-	}
-	std::cout << "\n\n";
-	
-	std::cout << "DFS(b) ->\t";
-	edges = dfs('b', &umg);
-	for (itr = edges.begin(); itr != edges.end(); itr++) {
-		std::cout << (*itr) << "\t";
-	}
-	std::cout << "\n\n";
-	
-	std::cout << "BFS(b) ->\t";
-	edges = bfs('b', &umg);
-	for (itr = edges.begin(); itr != edges.end(); itr++) {
-		std::cout << (*itr) << "\t";
-	}
-	std::cout << "\n\n";
-
-	/***********************************************************/
-	/************************ UListGraph ***********************/
-	/***********************************************************/
-
-	UListGraph<char> ulg(n);
-
-	ulg.loadGraph(n, m, input);
+	std::cout << "---List Graph---" << std::endl;
 	std::cout << ulg.toString();
+
+	std::cout << "DFS" << std::endl;
+	dfs(2, &umg);
+	std::cout << "\n";
+	
+	std::cout << "\nBFS" << std::endl;
+	bfs(2, &ulg);
+	std::cout << "\n";
+
+	return 0;
+
 }
