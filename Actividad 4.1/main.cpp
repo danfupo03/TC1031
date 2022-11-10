@@ -61,10 +61,12 @@ int main(int argc, char *argv[])
 	std::cout << "---List Graph---" << std::endl;
 	std::cout << ulg.toString();
 
+	//DFS implementation
 	std::cout << "DFS" << std::endl;
 	dfs(8, &umg);
 	std::cout << "\n";
 	
+	//BFS implementation
 	std::cout << "\nBFS" << std::endl;
 	bfs(8, &ulg);
 	std::cout << "\n";
