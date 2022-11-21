@@ -1,9 +1,10 @@
 // =================================================================
 //
 // File: heap.h
-// Author: Daniel Emilio Fuentes Portaluppi
+// Authors: Daniel Emilio Fuentes Portaluppi
+//         José Diego Llaca Castro - A01704793
 // Description: This file contains the implementation of TDA Heap
-//							(in this case is MIN-HEAP).
+//				(in this case is MIN-HEAP).
 //
 // =================================================================
 

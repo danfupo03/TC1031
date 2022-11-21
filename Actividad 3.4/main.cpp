@@ -1,7 +1,8 @@
 // =================================================================
 //
 // File: main.cpp
-// Author: Daniel Emilio Fuentes Portaluppi
+// Authors: Daniel Emilio Fuentes Portaluppi - A01708302
+//         José Diego Llaca Castro - A01704793
 // Date: 21/11/2022
 //
 // =================================================================
