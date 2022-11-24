@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
 		heap.push(sum);
 		k += sum - 1;
 	}
-	output << k << std::endl
+	output << k << std::endl;
 
 	return 0;
 }
