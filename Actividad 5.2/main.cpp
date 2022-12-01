@@ -1,8 +1,11 @@
 // =================================================================
 //
 // File: main.cpp
-// Author:
-// Date:
+// Authors: Daniel Emilio Fuentes Portaluppi - A01708302
+//          José Diego Llaca Castro - A01704793
+//			Ivan Ricardo Paredes Aviles - A01705083
+//
+// Date: 30/11/2022
 //
 // =================================================================
 #include <iostream>
